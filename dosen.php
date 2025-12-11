@@ -35,6 +35,9 @@ include('komponen/koneksi.php');
           <h3 class="card-title fw-bold">
             <i class="bi bi-person-badge"></i> Tabel Data Dosen
           </h3>
+          <a href="#">
+            <button class="btn btn-light btn-sm float-sm-end">Tambah Data
+            </button></a>
         </div>
 
         <div class="card-body table-responsive">
@@ -45,6 +48,7 @@ include('komponen/koneksi.php');
                 <th>Nama</th>
                 <th>Prodi</th>
                 <th>E-mail</th>
+                <th>Aksi</th>
               </tr>
             </thead>
 
@@ -59,18 +63,16 @@ include('komponen/koneksi.php');
                   <td><?php echo $row[1]; ?></td>
                   <td class="text-center"><?php echo $row[2]; ?></td>
                   <td><?php echo $row[3]; ?></td>
+                  <td>
+                    <a href="form/edit_dosen.php?nidn=<?= $row[0] ?>">Edit</a> |
+                    <a href="proses/proses_delete.php?nidn=<?= $row[0] ?>">Hapus</a>
+                  </td>
                 </tr>
               <?php endwhile; ?>
             </tbody>
           </table>
         </div>
-
-        <div class="card-footer text-center text-muted">
-          © <?= date('Y') ?> - Data Dosen
-        </div>
-
       </div>
-
     </div>
   </div>
   <!--end::App Content-->

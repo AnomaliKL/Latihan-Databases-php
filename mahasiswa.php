@@ -35,6 +35,10 @@ include('komponen/koneksi.php');
           <h3 class="card-title fw-bold">
             <i class="bi bi-people"></i> Tabel Data Mahasiswa
           </h3>
+
+          <a href="#">
+            <button class="btn btn-light btn-sm float-sm-end">Tambah Data
+            </button></a>
         </div>
 
         <div class="card-body table-responsive">
@@ -46,6 +50,7 @@ include('komponen/koneksi.php');
                 <th>Prodi</th>
                 <th>Angkatan</th>
                 <th>E-mail</th>
+                <th>Aksi</th>
               </tr>
             </thead>
 
@@ -61,18 +66,16 @@ include('komponen/koneksi.php');
                   <td class="text-center"><?= $row[2]; ?></td>
                   <td class="text-center"><?= $row[3]; ?></td>
                   <td><?= $row[4]; ?></td>
+                  <td>
+                    <a href="form/edit_mahasiswa.php?nim=<?= $row[0] ?>">Edit</a> |
+                    <a href="proses/proses_delete.php?nim=<?= $row[0] ?>">Hapus</a>
+                  </td>
                 </tr>
               <?php endwhile; ?>
             </tbody>
           </table>
         </div>
-
-        <div class="card-footer text-center text-muted">
-          © <?= date('Y') ?> - Data Mahasiswa
-        </div>
-
       </div>
-
     </div>
   </div>
   <!--end::App Content-->

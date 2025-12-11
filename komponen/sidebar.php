@@ -8,8 +8,7 @@
             <img
               src="assets/img/php-logo.png"
               alt="AdminLTE Logo"
-              class="brand-image opacity-75 shadow"
-            />
+              class="brand-image opacity-75 shadow" />
             <!--end::Brand Image-->
             <!--begin::Brand Text-->
             <span class="brand-text fw-light">WEB 2;</span>
@@ -28,8 +27,7 @@
               role="navigation"
               aria-label="Main navigation"
               data-accordion="false"
-              id="navigation"
-            >
+              id="navigation">
               <li class="nav-item">
                 <a href="#" class="nav-link">
                   <i class="nav-icon bi bi-speedometer"></i>
@@ -40,25 +38,25 @@
                 </a>
                 <ul class="nav nav-treeview">
                   <li class="nav-item">
-                    <a href="mahasiswa.php" class="nav-link">
+                    <a href="../mahasiswa.php" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
                       <p>Tabel Mahasiswa</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="dosen.php" class="nav-link">
+                    <a href="../dosen.php" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
                       <p>Tabel Dosen</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="matkul.php" class="nav-link">
+                    <a href="../matkul.php" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
                       <p>Tabel Mata Kuliah</p>
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a href="nilai.php" class="nav-link">
+                    <a href="../nilai.php" class="nav-link">
                       <i class="nav-icon bi bi-circle"></i>
                       <p>Tabel Nilai</p>
                     </a>
