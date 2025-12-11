@@ -35,7 +35,7 @@ include('komponen/koneksi.php');
                     <h3 class="card-title fw-bold">
                         <i class="bi bi-journal-text"></i> Tabel Data Nilai
                     </h3>
-                    <a href="#">
+                    <a href="form/tambahData_matkul.php">
                         <button class="btn btn-light btn-sm float-sm-end">Tambah Data
                         </button></a>
                 </div>
