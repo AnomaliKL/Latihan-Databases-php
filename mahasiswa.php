@@ -36,7 +36,7 @@ include('komponen/koneksi.php');
             <i class="bi bi-people"></i> Tabel Data Mahasiswa
           </h3>
 
-          <a href="#">
+          <a href="form/tambahData_mahasiswa.php">
             <button class="btn btn-light btn-sm float-sm-end">Tambah Data
             </button></a>
         </div>

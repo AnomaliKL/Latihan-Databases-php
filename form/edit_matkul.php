@@ -6,6 +6,9 @@ include('../komponen/koneksi.php');
 $xkodeMatkul = $_GET['kodeMatkul'];
 $query = mysqli_query($conn, "SELECT * FROM tbl_matkul WHERE kodeMatkul='$xkodeMatkul'");
 $matkul = mysqli_fetch_array($query);
+
+$daftar = mysqli_query($conn, "SELECT * FROM tbl_dosen");
+$dosen = mysqli_fetch_array($daftar);
 ?>
 <h3>Ubah Data Mahasiswa</h3>
 <form action="../proses/proses_update.php" method="POST">
@@ -24,8 +27,6 @@ $matkul = mysqli_fetch_array($query);
         </tr>
         <tr>
             <td>NIDN</td>
-            <?=  ?>
-            <option value=""></option>
             <td><input type="text" name="nidn" value="<?= $matkul['nidn'] ?>"></td>
         </tr>
         <tr>
