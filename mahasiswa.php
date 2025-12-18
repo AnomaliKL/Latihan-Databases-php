@@ -1,4 +1,5 @@
 <?php
+include('Login/blok.php');
 include('komponen/header.php');
 include('komponen/topbar.php');
 include('komponen/sidebar.php');
@@ -14,6 +15,8 @@ include('komponen/koneksi.php');
       <div class="row">
         <div class="col-sm-6">
           <h3 class="mb-0 fw-bold">Data Mahasiswa</h3>
+          <p>user ini : <?= $_SESSION['Login_user'] ?></p>
+          <p>role ini : <?= $_SESSION['role'] ?></p>
         </div>
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-end">
@@ -38,6 +41,7 @@ include('komponen/koneksi.php');
 
           <a href="form/tambahData_mahasiswa.php">
             <button class="btn btn-light btn-sm float-sm-end">Tambah Data
+
             </button></a>
         </div>
 

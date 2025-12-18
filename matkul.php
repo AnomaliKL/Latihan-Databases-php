@@ -1,4 +1,5 @@
 <?php
+include('Login/blok.php');
 include('komponen/header.php');
 include('komponen/topbar.php');
 include('komponen/sidebar.php');
@@ -34,6 +35,8 @@ include('komponen/koneksi.php');
                 <div class="card-header bg-warning text-dark">
                     <h3 class="card-title fw-bold">
                         <i class="bi bi-journal-text"></i> Tabel Data Nilai
+                        <p>user ini : <?= $_SESSION['Login_user'] ?></p>
+                        <p>role ini : <?= $_SESSION['role'] ?></p>
                     </h3>
                     <a href="form/tambahData_matkul.php">
                         <button class="btn btn-light btn-sm float-sm-end">Tambah Data

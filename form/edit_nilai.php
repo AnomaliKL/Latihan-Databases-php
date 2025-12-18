@@ -16,6 +16,11 @@ $nilai = mysqli_fetch_array($query);
 ?>
 
 <?php
+include '../Login/blok.php';
+if ($_SESSION['role'] == 'mhs') {
+    header("Location: index.php");
+    exit();
+}
 include('../komponen/header.php');
 include('../komponen/topbar.php');
 include('../komponen/sidebar.php');

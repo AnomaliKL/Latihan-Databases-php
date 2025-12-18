@@ -1,4 +1,5 @@
 <?php
+include('Login/blok.php');
 include('komponen/header.php');
 include('komponen/topbar.php');
 include('komponen/sidebar.php');
