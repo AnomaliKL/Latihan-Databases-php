@@ -3,6 +3,12 @@ include '../komponen/koneksi.php';
 // Update Mahasiswa
 if (isset($_POST['nim'])) {
     $vnim = $_POST['nim'];
+
+    $namaFile = $_FILES['fileFoto']['name'];
+    $lokasiSementara = $_FILES['fileFoto']['tmp_name'];
+    $lokasiTujuan = '../folderFoto/' . $vnim . "_" . $namaFile;
+    $terUpload = move_uploaded_file($lokasiSementara, $lokasiTujuan);
+
     $vnama = $_POST['nama'];
     $vprodi = $_POST['prodi'];
     $vangkatan = $_POST['angkatan'];
@@ -12,7 +18,8 @@ if (isset($_POST['nim'])) {
         nama='$vnama',
         prodi='$vprodi',
         angkatan='$vangkatan',
-        email='$vemail'
+        email='$vemail',
+        foto='$lokasiTujuan'
         WHERE nim='$vnim'";
     mysqli_query($conn, $queryUpdate);
     header("Location: ../mahasiswa.php");
@@ -22,6 +29,12 @@ if (isset($_POST['nim'])) {
 // Update Dosen
 if (isset($_POST['nidn'])) {
     $vnidn = $_POST['nidn'];
+
+    $namaFile = $_FILES['fileFoto']['name'];
+    $lokasiSementara = $_FILES['fileFoto']['tmp_name'];
+    $lokasiTujuan = '../folderFoto/' . $vnidn . "_" . $namaFile;
+    $terUpload = move_uploaded_file($lokasiSementara, $lokasiTujuan);
+
     $vnama = $_POST['nama'];
     $vprodi = $_POST['prodi'];
     $vemail = $_POST['email'];
@@ -29,7 +42,8 @@ if (isset($_POST['nidn'])) {
     $queryUpdate = "UPDATE tbl_dosen SET 
         nama='$vnama',
         prodi='$vprodi',
-        email='$vemail'
+        email='$vemail',
+        foto='$lokasiTujuan'
         WHERE nidn='$vnidn'";
     mysqli_query($conn, $queryUpdate);
     header("Location: ../dosen.php");

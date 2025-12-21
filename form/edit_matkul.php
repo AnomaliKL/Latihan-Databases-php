@@ -16,7 +16,7 @@ $daftar = mysqli_query($conn, "SELECT * FROM tbl_dosen");
 $dosen = mysqli_fetch_array($daftar);
 ?>
 <h3>Ubah Data Mahasiswa</h3>
-<form action="../proses/proses_update.php" method="POST">
+<form action="../proses/proses_update.php" method="POST" enctype="multipart/form-data">
     <table>
         <tr>
             <td>Kode Matkul</td>

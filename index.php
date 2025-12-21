@@ -35,9 +35,9 @@ include('komponen/sidebar.php');
         <div class="col-12">
           <div class="card bg-primary text-white shadow">
             <div class="card-body text-center py-5">
-              <h1 class="fw-bold">👋 Welcome</h1>
+              <h1 class="fw-bold">👋 Hallo <?= $_SESSION['Login_user'] ?> !!!</h1>
               <p class="fs-5 mt-2">
-                Kumpulan Tugas Praktikum Web 2 Menggunakan PHP
+                Selamat datang di Halaman Dashboard
               </p>
             </div>
           </div>
@@ -93,4 +93,5 @@ include('komponen/sidebar.php');
 
 <?php
 include('komponen/footer.php');
+
 ?>

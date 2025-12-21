@@ -11,6 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $row = mysqli_fetch_assoc($hasil);
         $_SESSION['Login_user'] = $user;
         $_SESSION['role'] = $row['role'];
+        $_SESSION['pass'] = $pass;
+        $_SESSION['id'] = $row['id'];
         header("Location: ../index.php");
         exit();
     } else {

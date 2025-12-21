@@ -10,7 +10,7 @@ include('../komponen/sidebar.php');
 ?>
 <main>
     <h3>Ubah Data Dosen</h3>
-    <form action="../proses/proses_tambah/dosen.php" method="POST">
+    <form action="../proses/proses_tambah/dosen.php" method="POST" enctype="multipart/form-data">
         <table>
             <tr>
                 <td>NIDN</td>
@@ -36,6 +36,9 @@ include('../komponen/sidebar.php');
                 <td>Email</td>
                 <td><input type="email" name="email"></td>
             </tr>
+            <tr></tr>
+            <td>Foto</td>
+            <td><input type="file" name="fileFoto"></td>
             <tr>
                 <td></td>
                 <td><input type="submit" value="Simpan"></td>

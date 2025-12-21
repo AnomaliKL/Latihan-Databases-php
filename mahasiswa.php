@@ -1,9 +1,9 @@
 <?php
 include('Login/blok.php');
 include('komponen/header.php');
+include('komponen/koneksi.php');
 include('komponen/topbar.php');
 include('komponen/sidebar.php');
-include('komponen/koneksi.php');
 ?>
 
 <!--begin::App Main-->

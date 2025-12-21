@@ -36,7 +36,7 @@
                   src="../assets/img/profile.jpg"
                   class="user-image rounded-circle shadow"
                   alt="User Image" />
-                <span class="d-none d-md-inline">Khaikal Iksanuddin</span>
+                <span class="d-none d-md-inline"><?= $_SESSION['Login_user'] ?></span>
               </a>
               <ul class="dropdown-menu dropdown-menu-lg dropdown-menu-end">
                 <!--begin::User Image-->
@@ -46,7 +46,7 @@
                     class="rounded-circle shadow"
                     alt="User Image" />
                   <p>
-                    Alexander Pierce - Web Developer
+                    <?= $_SESSION['Login_user'] ?> - Web Developer
                     <small>Member since Dec. 2024</small>
                   </p>
                 </li>
@@ -56,7 +56,14 @@
                   <!--begin::Row-->
                   <div class="row">
                     <div class="col-4 text-center"><a href="#">Followers</a></div>
-                    <div class="col-4 text-center"><a href="#">Sales</a></div>
+                    <div class="col-4 text-center">
+                      <a href="#"
+                        class="btn btn-link"
+                        data-bs-toggle="modal"
+                        data-bs-target="#modalEditProfile">
+                        Edit profile
+                      </a>
+                    </div>
                     <div class="col-4 text-center"><a href="#">Friends</a></div>
                   </div>
                   <!--end::Row-->

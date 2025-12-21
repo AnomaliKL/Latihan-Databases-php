@@ -14,7 +14,7 @@ $mhs = mysqli_fetch_array($query);
 ?>
 <main>
     <h3>Ubah Data Mahasiswa</h3>
-    <form action="../proses/proses_update.php" method="POST">
+    <form action="../proses/proses_update.php" method="POST" enctype="multipart/form-data">
         <table>
             <tr>
                 <td>NIM</td>
@@ -43,6 +43,13 @@ $mhs = mysqli_fetch_array($query);
             <tr>
                 <td>Email</td>
                 <td><input type="email" name="email" value="<?= $mhs['email'] ?>"></td>
+            </tr>
+            <tr>
+                <td>Foto</td>
+                <td>
+                    <img src="<?= $mhs['foto'] ?>" alt="">
+                    <input type="file" name="fileFoto">
+                </td>
             </tr>
             <tr>
                 <td></td>
